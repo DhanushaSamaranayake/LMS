@@ -1,34 +1,37 @@
-import EcommerceMetrics from "../../components/ecommerce/EcommerceMetrics";
-import MonthlySalesChart from "../../components/ecommerce/MonthlySalesChart";
-import StatisticsChart from "../../components/ecommerce/StatisticsChart";
-import MonthlyTarget from "../../components/ecommerce/MonthlyTarget";
 import PageMeta from "../../components/common/PageMeta";
-
+import LmsMetrics from "../../components/ecommerce/LmsMetrics";
+import AcademicStatisticsChart from "../../components/ecommerce/AcademicStatisticsChart";
+import AnnouncementsCard from "../../components/ecommerce/AnnouncementsCard";
+import DegreeProgressCard from "../../components/ecommerce/DegreeProgress";
+import StudyHoursChart from "../../components/ecommerce/StudyHoursChart";
+import LevelupCard from "../../components/ecommerce/LevelupCard";
+import RecentlyAccessedCourses from "../../components/ecommerce/RecentlyAccessedCourses";
+import LmsStatsDetailed from "../../components/ecommerce/LmsStatsDetailed";
+import TimelineCard from "../../components/ecommerce/TimelineCard";
+import DashboardCalendar from "../../components/ecommerce/DashboardCalendar";
 export default function Home() {
   return (
     <>
       <PageMeta
-        title="React.js Ecommerce Dashboard | TailAdmin - React.js Admin Dashboard Template"
-        description="This is React.js Ecommerce Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template"
+        title="Student Dashboard | University LMS"
+        description="Your academic overview and course management."
       />
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12 space-y-6 xl:col-span-7">
-          <EcommerceMetrics />
-
-          <MonthlySalesChart />
+          <AnnouncementsCard />
+          <LmsMetrics />
+          <RecentlyAccessedCourses />
+          <LevelupCard />
+          <LmsStatsDetailed />
+          <TimelineCard />
         </div>
 
-        <div className="col-span-12 xl:col-span-5">
-          <MonthlyTarget />
+        <div className="col-span-12 space-y-6 xl:col-span-5">
+          <AcademicStatisticsChart />
+          <DegreeProgressCard />
+          <StudyHoursChart />
+          <DashboardCalendar />
         </div>
-
-        <div className="col-span-12">
-          <StatisticsChart />
-        </div>
-
-        
-
-        
       </div>
     </>
   );
